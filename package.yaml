@@ -1,0 +1,18 @@
+config_version : 0
+
+name: qt
+
+version: 4.8.7
+
+variants:
+- [ platform-linux ]
+
+commands:
+- export QTDIR=!ROOT!
+- export QT_INCLUDE_DIR=!ROOT!/include
+- export QT_LIB_DIR=!ROOT!/lib
+- export LD_LIBRARY_PATH=!ROOT!/lib:$LD_LIBRARY_PATH
+- export QTLIB=!ROOT!/lib
+- export QT_QMAKE_EXECUTABLE=!ROOT!/bin/qmake
+- export PATH=!ROOT!/bin:$PATH
+- export CMAKE_MODULE_PATH=$CMAKE_MODULE_PATH:!ROOT!/cmake
