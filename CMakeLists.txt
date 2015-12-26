@@ -21,9 +21,13 @@ ExternalProject_add(
     URL ${url_qt}
     PREFIX qt
     UPDATE_COMMAND ""
-    GIT_SUBMODULES ""
     CONFIGURE_COMMAND ./configure --prefix=${CMAKE_INSTALL_PREFIX} -opensource -confirm-license -no-phonon -no-phonon-backend -no-dbus -no-qt3support -no-rpath -no-webkit -fast
     INSTALL_COMMAND "${install_cmd}"
     BUILD_IN_SOURCE 1
     BUILD_COMMAND gmake ${make_args}
+)
+
+rez_install_files(
+    cmake/qt.cmake
+    DESTINATION .
 )

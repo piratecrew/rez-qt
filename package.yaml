@@ -8,6 +8,7 @@ variants:
 - [ platform-linux ]
 
 commands:
+- export CMAKE_MODULE_PATH=$CMAKE_MODULE_PATH:!ROOT!/cmake
 - export QTDIR=!ROOT!
 - export QT_INCLUDE_DIR=!ROOT!/include
 - export QT_LIB_DIR=!ROOT!/lib
